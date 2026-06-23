@@ -106,7 +106,7 @@
 
   #about{background:var(--black);position:relative;overflow:hidden;}
   .about-bg-glow{position:absolute;top:20%;right:-5%;width:40%;height:60%;background:radial-gradient(circle,rgba(74,143,168,0.06),transparent 70%);pointer-events:none;}
-  .about-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:64px;align-items:center;position:relative;z-index:2;}
+  .about-grid{display:grid;grid-template-columns:1.4fr 0.6fr;gap:56px;align-items:center;position:relative;z-index:2;}
   .about-name{font-family:var(--serif);font-size:38px;font-weight:300;margin-bottom:8px;}
   .about-role{font-family:var(--mono);font-size:12px;color:var(--gold);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:28px;}
   .about-bio{font-size:14px;color:var(--muted);line-height:2;margin-bottom:32px;}
@@ -118,16 +118,22 @@
   .skill-tags{display:flex;flex-wrap:wrap;gap:8px;}
   .skill-tag{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--border);padding:6px 14px;letter-spacing:0.05em;transition:all 0.2s;}
   .skill-tag:hover{color:var(--gold);border-color:var(--gold-dim);transform:translateY(-2px);}
-  .about-visual{position:relative;aspect-ratio:3/4;overflow:hidden;border:1px solid var(--border);}
-  .about-visual img{width:100%;height:100%;object-fit:cover;filter:grayscale(0.3) contrast(1.05);transition:filter 0.5s,transform 0.6s;}
+  .about-visual{position:relative;max-width:340px;margin:0 auto;aspect-ratio:4/5;overflow:hidden;border:1px solid var(--border);background:var(--panel);}
+  .about-visual img{width:100%;height:100%;object-fit:cover;filter:grayscale(0.25) contrast(1.05);transition:filter 0.5s,transform 0.6s;display:block;}
   .about-visual:hover img{filter:grayscale(0) contrast(1.1);transform:scale(1.03);}
-  .about-visual-frame{position:absolute;inset:12px;border:1px solid rgba(201,168,76,0.3);pointer-events:none;z-index:2;}
-  .about-visual-corner{position:absolute;width:18px;height:18px;z-index:3;pointer-events:none;}
-  .about-visual-corner.tl{top:6px;left:6px;border-top:1px solid var(--gold);border-left:1px solid var(--gold);}
-  .about-visual-corner.tr{top:6px;right:6px;border-top:1px solid var(--gold);border-right:1px solid var(--gold);}
-  .about-visual-corner.bl{bottom:6px;left:6px;border-bottom:1px solid var(--gold);border-left:1px solid var(--gold);}
-  .about-visual-corner.br{bottom:6px;right:6px;border-bottom:1px solid var(--gold);border-right:1px solid var(--gold);}
-  .about-visual-tag{position:absolute;bottom:20px;left:0;right:0;text-align:center;font-family:var(--mono);font-size:10px;color:var(--text);letter-spacing:0.2em;text-transform:uppercase;z-index:3;text-shadow:0 2px 8px rgba(0,0,0,0.8);}
+  .about-visual-frame{position:absolute;inset:10px;border:1px solid rgba(201,168,76,0.3);pointer-events:none;z-index:2;}
+  .about-visual-corner{position:absolute;width:16px;height:16px;z-index:3;pointer-events:none;}
+  .about-visual-corner.tl{top:5px;left:5px;border-top:1px solid var(--gold);border-left:1px solid var(--gold);}
+  .about-visual-corner.tr{top:5px;right:5px;border-top:1px solid var(--gold);border-right:1px solid var(--gold);}
+  .about-visual-corner.bl{bottom:5px;left:5px;border-bottom:1px solid var(--gold);border-left:1px solid var(--gold);}
+  .about-visual-corner.br{bottom:5px;right:5px;border-bottom:1px solid var(--gold);border-right:1px solid var(--gold);}
+  .about-visual-tagbar{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;padding:14px 16px;z-index:3;font-family:var(--mono);font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(232,228,218,0.85);text-shadow:0 2px 6px rgba(0,0,0,0.7);}
+  .about-visual-caption{position:absolute;bottom:0;left:0;right:0;padding:16px 18px 14px;background:linear-gradient(to top,rgba(0,0,0,0.85),transparent);z-index:3;}
+  .about-visual-name-en{font-family:var(--mono);font-size:10px;color:var(--gold);letter-spacing:0.2em;text-transform:uppercase;}
+  .about-visual-role-en{font-size:11px;color:var(--muted);margin-top:2px;}
+  .about-quote{margin-top:20px;max-width:340px;margin-left:auto;margin-right:auto;padding:18px 18px 16px;border-left:2px solid var(--gold-dim);background:rgba(201,168,76,0.04);}
+  .about-quote p{font-family:var(--serif);font-size:14px;color:var(--text);line-height:1.8;font-style:normal;}
+  .about-quote-mark{font-family:var(--serif);color:var(--gold);font-size:20px;line-height:1;margin-bottom:4px;display:block;}
 
   #contact{background:var(--deep);text-align:center;padding:120px 48px;}
   .contact-eyebrow{font-family:var(--mono);font-size:11px;color:var(--cold);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:24px;}
@@ -166,7 +172,7 @@
     section,.hero{padding-left:20px;padding-right:20px;}
     .process-item{grid-template-columns:1fr;gap:14px;}
     .about-grid{grid-template-columns:1fr;gap:40px;}
-    .about-visual{max-width:280px;margin:0 auto;}
+    .about-visual{max-width:260px;}
     .works-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));}
     .hero-reel{display:none;}
     .divider{margin:0 20px;}
@@ -203,7 +209,7 @@
   </div>
   <div class="hero-content">
     <div class="hero-eyebrow">AI 短剧制作师 · 内容创作者 · 2026</div>
-    <h1 class="hero-title">跑通<em>全流程</em>的<br>AI 影像创作者</h1>
+    <h1 class="hero-title">专注<em>全流程</em>的<br>AI 影像创作者</h1>
     <div class="hero-meta">
       <p class="hero-desc">镜头前能独立控场的主播，镜头后能走通「脚本 → 分镜 → AI 生成 → 成片」的 AI 短剧制作者。<br>懂内容、懂主播、懂数据。</p>
       <div class="hero-stats">
@@ -231,15 +237,10 @@
     <button class="filter-btn" onclick="filterWorks('微电影',this)">AI 微电影</button>
     <button class="filter-btn" onclick="filterWorks('广告',this)">AI 广告</button>
     <button class="filter-btn" onclick="filterWorks('航拍',this)">AI 航拍</button>
+    <button class="filter-btn" onclick="filterWorks('实验',this)">AI 实验</button>
   </div>
 
   <div class="works-grid" id="works-grid">
-
-    <div class="work-card g1 fade-in" data-type="短剧" onclick="openVideo('costume.mp4','《妹妹抢错婚，我嫁真储君》','AI 短剧 · 古风女频 · 分集制作',false)">
-      <video class="work-preview" src="costume.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video>
-      <div class="work-overlay"></div><div class="work-thumb"></div>
-      <div class="work-info"><div class="work-type">AI 短剧 · 古风女频</div><div class="work-name">《妹妹抢错婚，我嫁真储君》</div><div class="work-tools">可灵 · 即梦 · 剪映</div></div>
-    </div>
 
     <div class="work-card g3 fade-in" data-type="微电影" onclick="openVideo('microfilm.mp4','《追逐》','AI 微电影 · 黑白动作戏 · 电影感',false)">
       <video class="work-preview" src="microfilm.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video>
@@ -257,6 +258,12 @@
       <video class="work-preview" src="ad.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video>
       <div class="work-overlay"></div><div class="work-thumb"></div>
       <div class="work-info"><div class="work-type">AI 广告</div><div class="work-name">商业广告短片</div><div class="work-tools">Midjourney · 可灵 · 后期合成</div></div>
+    </div>
+
+    <div class="work-card g3 fade-in landscape" data-type="实验" onclick="openVideo('visual-lab.mp4','《AI 视觉实验》','AI 视觉实验 · 横屏 · 创意表达',true)">
+      <video class="work-preview" src="visual-lab.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video>
+      <div class="work-overlay"></div><div class="work-thumb"></div>
+      <div class="work-info"><div class="work-type">AI 视觉实验</div><div class="work-name">《AI 视觉实验》</div><div class="work-tools">Midjourney · 可灵 · 高饱和创意</div></div>
     </div>
 
     <div class="work-card g2 fade-in" data-type="航拍" onclick="openVideo('aerial.mp4','《山风过境》','AI 微视频 · FPV 漫游 · 一镜到底',false)">
@@ -308,6 +315,11 @@
       <img src="lifespan-storyboard.jpg" alt="寿命可视化 分镜" loading="lazy">
       <div class="asset-zoom-hint">点击放大</div>
       <div class="asset-card-info"><div class="asset-card-title">《寿命可视化》分镜板</div><div class="asset-card-meta">赛博都市 · 反转结构 · 5 镜</div></div>
+    </div>
+    <div class="asset-card fade-in" onclick="openImage('lifespan2-assets.jpg')">
+      <img src="lifespan2-assets.jpg" alt="寿命可视化 角色与道具设定" loading="lazy">
+      <div class="asset-zoom-hint">点击放大</div>
+      <div class="asset-card-info"><div class="asset-card-title">《寿命可视化》设定板</div><div class="asset-card-meta">角色 / 群像 / UI / 道具 / 场景</div></div>
     </div>
     <div class="asset-card fade-in" onclick="openImage('aerial-storyboard.jpg')">
       <img src="aerial-storyboard.jpg" alt="山风过境 分镜" loading="lazy">
@@ -365,7 +377,7 @@
       <h2 class="about-name">向奕龙</h2>
       <div class="about-role">AI 短剧制作师 · 主播 · 内容策划</div>
       <p class="about-bio">
-        从<strong>语音直播创业</strong>起步，一路做到<strong>运营 PM</strong>，再回到<strong>镜头前做主播</strong>，如今专注 <strong>AI 短剧创作</strong>。我相信 AI 不是替代创作，而是让一个人也能完成一支团队的活。<br><br>
+        从<strong>语音直播创业</strong>起步，一路做到<strong>运营 PM</strong>，再回到<strong>镜头前做主播</strong>，如今专注 <strong>AI 短剧创作</strong>。<br><br>
         自 2022 年 AI 绘画兴起即开始实践生成式工具，现于刺猬星球 AI 短剧训练营系统打磨「脚本 → 分镜 → 生成 → 成片」的全流程。擅长用电影镜头语言驾驭 AI 生成画面，把抽象创意稳定落地成可量产的成片。
       </p>
       <div class="about-highlights">
@@ -387,12 +399,22 @@
       </div>
     </div>
 
-    <div class="about-visual fade-in">
-      <img src="avatar.jpg" alt="向奕龙">
-      <div class="about-visual-frame"></div>
-      <div class="about-visual-corner tl"></div><div class="about-visual-corner tr"></div>
-      <div class="about-visual-corner bl"></div><div class="about-visual-corner br"></div>
-      <div class="about-visual-tag">XIANG YILONG</div>
+    <div class="fade-in">
+      <div class="about-visual">
+        <img src="avatar.jpg" alt="向奕龙">
+        <div class="about-visual-frame"></div>
+        <div class="about-visual-corner tl"></div><div class="about-visual-corner tr"></div>
+        <div class="about-visual-corner bl"></div><div class="about-visual-corner br"></div>
+        <div class="about-visual-tagbar"><span>PORTRAIT</span><span>2026</span></div>
+        <div class="about-visual-caption">
+          <div class="about-visual-name-en">XIANG YILONG</div>
+          <div class="about-visual-role-en">AI Film Director / Host</div>
+        </div>
+      </div>
+      <div class="about-quote">
+        <span class="about-quote-mark">"</span>
+        <p>AI 不是替代创作，而是让一个人也能完成一支团队的活。</p>
+      </div>
     </div>
   </div>
 </section>
